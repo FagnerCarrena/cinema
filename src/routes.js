@@ -3,6 +3,7 @@ import Inicio from "Pages/Inicio";
 import Cabecalho from "components/Cabecalho";
 import Container from "components/Container";
 import Rodape from "components/Rodape";
+import FavoritosProvider from "components/contextos/Favoritos";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function AppRoutes(){
@@ -10,12 +11,17 @@ function AppRoutes(){
 <BrowserRouter>
 <Cabecalho/>
 <Container>
+       
+    <FavoritosProvider>
+    <Routes>
 
-<Routes>
-
-    <Route  path="/" element={<Inicio/>}></Route>
-    <Route path="/favoritos" element={<Favoritos/>}></Route>
+<Route  path="/" element={<Inicio/>}></Route>
+<Route path="/favoritos" element={<Favoritos/>}></Route>
 </Routes>
+
+    </FavoritosProvider>
+
+
 </Container>
 
 <Rodape/>
