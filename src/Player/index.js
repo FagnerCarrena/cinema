@@ -6,7 +6,7 @@ import NaoEncontrada from 'Pages/NaoEncontrada';
 import { useEffect, useState } from 'react';
 
 function Player(){
-    const [videos, setVideos] = useState();
+    const [video, setVideo] = useState();
 
     const parametros = useParams();
 
@@ -14,12 +14,12 @@ function Player(){
     fetch(`https://my-json-server.typicode.com/fagnercarrena/cinema/videos?id=${parametros.id}`)
     .then(resposta=> resposta.json())
     .then(dados=>{
-        setVideos(...dados)
+        setVideo(...dados)
     })
 },[])
    
 
-    if(!videos){
+    if(!video){
 return <NaoEncontrada/>
     }
 
@@ -32,8 +32,8 @@ return (
     <section className={styles.container}>
     <iframe width="100%" 
     height="100%" 
-    src={videos.link} 
-    title={videos.titulo}
+    src={video.link} 
+    title={video.titulo}
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
