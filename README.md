@@ -5,7 +5,7 @@
 
 ---
 ##   👌Sobre
-O projeto consiste em um espaço onde o usuário possa assistir e favoritar seus filmes e série prediletos.
+O projeto consiste em um espaço onde o usuário possa assistir e favoritar seus filmes e séries prediletos.
 
 ### ✨ [Demo](https://cinema-henna-sigma.vercel.app/)
 
